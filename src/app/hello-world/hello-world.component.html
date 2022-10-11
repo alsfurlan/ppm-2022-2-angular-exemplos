@@ -1,8 +1,7 @@
 <label>Digite o seu nome:</label>
 
 <input type="text" placeholder="Informe o seu nome:" 
-    [value]="nome"
-    (keyup)="setNome($event)"/>
+    [(ngModel)]="nome" (keyup)="esconderNome()" />
 
 <button (click)="clique()">Clique aqui</button>
 

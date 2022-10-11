@@ -16,8 +16,8 @@ export class HelloWorldComponent implements OnInit {
   clique() {
     this.exibeNome = true;
   }
-  setNome(event: any) {
-    this.nome = event.target.value;
+  
+  esconderNome() {
     this.exibeNome = false;
   }
 
