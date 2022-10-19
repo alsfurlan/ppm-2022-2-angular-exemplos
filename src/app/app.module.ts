@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { DataHoraComponent } from './data-hora/data-hora.component';
 import '@angular/common/locales/global/pt';
+import { LivrosComponent } from './livros/livros.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HelloWorldComponent,
-    DataHoraComponent
+    DataHoraComponent,
+    LivrosComponent
   ],
   imports: [
     BrowserModule,
