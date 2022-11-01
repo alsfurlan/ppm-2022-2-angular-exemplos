@@ -7,21 +7,17 @@ import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { DataHoraComponent } from './data-hora/data-hora.component';
 import '@angular/common/locales/global/pt';
 import { LivrosComponent } from './livros/livros.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     HelloWorldComponent,
     DataHoraComponent,
-    LivrosComponent
+    LivrosComponent,
   ],
-  imports: [
-    BrowserModule,
-    FormsModule
-  ],
-  providers: [
-    { provide: LOCALE_ID, useValue: 'pt' } 
-  ],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, FormsModule, HttpClientModule],
+  providers: [{ provide: LOCALE_ID, useValue: 'pt' }],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

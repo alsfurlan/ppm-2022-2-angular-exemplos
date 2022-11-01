@@ -5,18 +5,24 @@ import { LivroService } from './livro.service';
 @Component({
   selector: 'livros',
   templateUrl: './livros.component.html',
-  styleUrls: ['./livros.component.css']
+  styleUrls: ['./livros.component.css'],
 })
 export class LivrosComponent implements OnInit {
   livros: Livro[] = [];
-  
-  constructor(
-    private livroService: LivroService
-  ) { 
-    this.livros = this.livroService.getLivros();
+
+  constructor(private livroService: LivroService) {
+    this.livroService.getLivros().subscribe(
+      (livros) => {
+        this.livros = livros;
+      },
+      (erro) => {
+        console.log('Erro: ', erro);
+      },
+      () => {
+        console.log('Terminou!');
+      }
+    );
   }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
