@@ -1,0 +1,23 @@
+<h1>Cadastro de Livros</h1>
+<form [formGroup]="livroForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="nome">Nome: </label>
+    <input id="nome" type="text" formControlName="nome" />
+  </div>
+  <div>
+    <label for="autor">Autor: </label>
+    <input id="autor" type="text" formControlName="autor" />
+  </div>
+  <div>
+    <label for="preco">Preço: </label>
+    <input id="preco" type="text" formControlName="preco" />
+  </div>
+  <div>
+    <label for="publicacao">Data de publicação: </label>
+    <input id="publicacao" type="date" formControlName="publicacao" />
+  </div>
+  <div>
+    <button type="submit">Cadastrar</button>
+    <button type="reset">Cancelar</button>
+  </div>
+</form>

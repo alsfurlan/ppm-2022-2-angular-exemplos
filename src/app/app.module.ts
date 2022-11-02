@@ -1,5 +1,5 @@
 import { LOCALE_ID, NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -8,6 +8,7 @@ import { DataHoraComponent } from './data-hora/data-hora.component';
 import '@angular/common/locales/global/pt';
 import { LivrosComponent } from './livros/livros.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LivrosCadastroComponent } from './livros-cadastro/livros-cadastro.component';
 
 @NgModule({
   declarations: [
@@ -15,8 +16,9 @@ import { HttpClientModule } from '@angular/common/http';
     HelloWorldComponent,
     DataHoraComponent,
     LivrosComponent,
+    LivrosCadastroComponent,
   ],
-  imports: [BrowserModule, FormsModule, HttpClientModule],
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule],
   providers: [{ provide: LOCALE_ID, useValue: 'pt' }],
   bootstrap: [AppComponent],
 })
