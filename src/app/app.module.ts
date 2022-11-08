@@ -9,6 +9,19 @@ import '@angular/common/locales/global/pt';
 import { LivrosComponent } from './livros/livros.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LivrosCadastroComponent } from './livros-cadastro/livros-cadastro.component';
+import { Route, RouterModule } from '@angular/router';
+
+const routes: Route[] = [
+  {
+    path: 'listagem',
+    component: LivrosComponent
+  },
+  {
+    path: 'cadastro',
+    component: LivrosCadastroComponent
+  }
+]
+
 
 @NgModule({
   declarations: [
@@ -18,8 +31,14 @@ import { LivrosCadastroComponent } from './livros-cadastro/livros-cadastro.compo
     LivrosComponent,
     LivrosCadastroComponent,
   ],
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(routes),
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
+  ],
   providers: [{ provide: LOCALE_ID, useValue: 'pt' }],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
