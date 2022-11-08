@@ -17,7 +17,7 @@
     <input id="publicacao" type="date" formControlName="publicacao" />
   </div>
   <div>
-    <button type="submit">Cadastrar</button>
+    <button type="submit" [disabled]="!livroForm.valid">Cadastrar</button>
     <button type="reset">Cancelar</button>
   </div>
 </form>

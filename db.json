@@ -24,6 +24,27 @@
       "nome": "O código limpo",
       "autor": "Robert Martin",
       "preco": "10.99"
+    },
+    {
+      "nome": "Domain-Driven Design",
+      "autor": "Eric Evans",
+      "preco": 454.08,
+      "publicacao": "2000-01-01",
+      "id": 5
+    },
+    {
+      "nome": "The Pragmatic Programmer",
+      "autor": "Andrew Hunt",
+      "preco": "381.99",
+      "publicacao": "2000-01-01",
+      "id": 6
+    },
+    {
+      "nome": "The Pragmatic Programmer",
+      "autor": "Andrew Hunt",
+      "preco": "381.99",
+      "publicacao": "2000-01-01",
+      "id": 7
     }
   ]
 }

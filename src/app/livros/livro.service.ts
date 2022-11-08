@@ -12,4 +12,8 @@ export class LivroService {
   getLivros(): Observable<Livro[]> {
     return this.http.get<Livro[]>('http://localhost:3000/livros');
   }
+
+  save(livro: Livro): Observable<Livro> {
+    return this.http.post<Livro>('http://localhost:3000/livros', livro);
+  }
 }
