@@ -19,5 +19,8 @@
                 {{ livro.publicacao | date:'dd/MM/YY'}}
             </em>
         </p>
+        <p>
+            <button (click)="remove(livro)">Excluir</button>
+        </p>
     </li>
 </ol>

@@ -7,7 +7,7 @@ import { Livro } from './livro.interface';
   providedIn: 'root',
 })
 export class LivroService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getLivros(): Observable<Livro[]> {
     return this.http.get<Livro[]>('http://localhost:3000/livros');
@@ -15,5 +15,9 @@ export class LivroService {
 
   save(livro: Livro): Observable<Livro> {
     return this.http.post<Livro>('http://localhost:3000/livros', livro);
+  }
+
+  remove({ id }: Livro): Observable<void> {
+    return this.http.delete<void>(`http://localhost:3000/livros/${id}`);
   }
 }

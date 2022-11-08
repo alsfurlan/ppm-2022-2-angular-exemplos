@@ -10,7 +10,12 @@ import { LivroService } from './livro.service';
 export class LivrosComponent implements OnInit {
   livros: Livro[] = [];
 
-  constructor(private livroService: LivroService) {
+  constructor(private livroService: LivroService) { }
+
+  ngOnInit(): void {
+    this.list();
+  }
+  list() {
     this.livroService.getLivros().subscribe(
       (livros) => {
         this.livros = livros;
@@ -24,5 +29,17 @@ export class LivrosComponent implements OnInit {
     );
   }
 
-  ngOnInit(): void {}
-}
+  remove(livro: Livro) {
+    this.livroService.remove(livro).subscribe(
+      () => this.list(),
+      (erro) => {
+        console.log('Erro: ', erro);
+      },
+      () => {
+        console.log('Terminou!');
+      }
+    );
+  }
+
+
+} 
