@@ -20,6 +20,7 @@
             </em>
         </p>
         <p>
+            <button [routerLink]="['/edicao', livro.id]">Editar</button>
             <button (click)="remove(livro)">Excluir</button>
         </p>
     </li>

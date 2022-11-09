@@ -19,6 +19,10 @@ const routes: Route[] = [
   {
     path: 'cadastro',
     component: LivrosCadastroComponent
+  },
+  {
+    path: 'edicao/:id',
+    component: LivrosCadastroComponent
   }
 ]
 

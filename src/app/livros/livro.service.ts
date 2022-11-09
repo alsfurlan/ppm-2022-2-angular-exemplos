@@ -9,12 +9,21 @@ import { Livro } from './livro.interface';
 export class LivroService {
   constructor(private http: HttpClient) { }
 
+  getLivro(id: number): Observable<Livro> {
+    return this.http.get<Livro>(`http://localhost:3000/livros/${id}`);
+  }
+
   getLivros(): Observable<Livro[]> {
     return this.http.get<Livro[]>('http://localhost:3000/livros');
   }
 
   save(livro: Livro): Observable<Livro> {
     return this.http.post<Livro>('http://localhost:3000/livros', livro);
+  }
+
+  
+  update(livro: Livro): Observable<Livro> {
+    return this.http.put<Livro>(`http://localhost:3000/livros/${livro.id}`, livro);
   }
 
   remove({ id }: Livro): Observable<void> {
