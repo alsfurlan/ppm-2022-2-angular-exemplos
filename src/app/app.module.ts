@@ -10,6 +10,7 @@ import { LivrosComponent } from './livros/livros.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LivrosCadastroComponent } from './livros-cadastro/livros-cadastro.component';
 import { Route, RouterModule } from '@angular/router';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const routes: Route[] = [
   {
@@ -45,7 +46,8 @@ const routes: Route[] = [
     RouterModule.forRoot(routes),
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'pt' }],
   bootstrap: [AppComponent],
