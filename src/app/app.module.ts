@@ -23,7 +23,12 @@ const routes: Route[] = [
   {
     path: 'edicao/:id',
     component: LivrosCadastroComponent
-  }
+  },
+  {
+    path: '**',
+    redirectTo: '/listagem',
+    pathMatch: 'full'
+  },
 ]
 
 
