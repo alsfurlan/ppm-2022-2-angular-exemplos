@@ -1,4 +1,4 @@
-<h1>Livros</h1>
+<h1 class="mt-3">Livros</h1>
 <hr>
 <ol>
     <li *ngFor="let livro of livros">
@@ -20,8 +20,8 @@
             </em>
         </p>
         <p>
-            <button [routerLink]="['/edicao', livro.id]">Editar</button>
-            <button (click)="remove(livro)">Excluir</button>
+            <button class="btn btn-warning" [routerLink]="['/edicao', livro.id]">Editar</button>
+            <button class="btn btn-danger ms-1" (click)="remove(livro)">Excluir</button>
         </p>
     </li>
 </ol>
